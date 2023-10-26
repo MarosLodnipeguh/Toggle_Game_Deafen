@@ -8,7 +8,7 @@ It works great with Rainbow Six Siege, during prep phase.
 Autohotkey v1.1 required! [download it here](https://www.autohotkey.com/download/ahk-install.exe)
 
 Than just run the [toggle_game_deafen.ahk](https://github.com/MarosLodnipeguh/toggle_game_deafen/blob/master/toggle_game_deafen.ahk) script and deafen/undeafen your game by pressing F1.
-VA.ahk should be located in the same folder as the script.
+[VA.ahk](https://github.com/MarosLodnipeguh/toggle_game_deafen/blob/master/VA.ahk) should be located in the same folder as the script.
 
 F1 is no good for you? 
 [Keybinding can be changed here](toggle_game_deafen.ahk#L11) 

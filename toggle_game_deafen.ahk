@@ -2,8 +2,11 @@
 
 mute_toggle := 0
 first_exec := true
+
 default_volume := 0
-deafen_volume := 0
+reduced_volume := 0
+
+reduction_procentage := 0.133 ; Defines how much the default volume will be reduced (13.33% of the original volume in this case)
 
 F1::  ; F1 hotkey - adjust volume of active window
 
@@ -16,12 +19,12 @@ F1::  ; F1 hotkey - adjust volume of active window
   
   if (first_exec = true) {
     VA_ISimpleAudioVolume_GetMasterVolume(Volume, default_volume) ; Get the original volume level of the application
-    deafen_volume := default_volume*0.133 ; Defines how much the default volume will be reduced (13.33% of the original volume in this case)
+    reduced_volume := default_volume * reduction_procentage ; Calculate the reduced volume level
     first_exec := false
   }
 
   if (mute_toggle = 0) {
-    VA_ISimpleAudioVolume_SetMasterVolume(Volume, deafen_volume) ; Set volume to reduced value
+    VA_ISimpleAudioVolume_SetMasterVolume(Volume, reduced_volume) ; Set volume to reduced value
     mute_toggle := 1
   } else {
     VA_ISimpleAudioVolume_SetMasterVolume(Volume, default_volume) ; Set volume back to the original value

@@ -1,10 +1,23 @@
-# mute-current-application
-Autohotkey script to mute the current application by pressing F1. This will ONLY mute the application that is in focus, leaving all background applications still audible.
+# toggle game deafen
+Autohotkey script to reduce the current application volume, on toggle, to have better comms / not get earraped by the game.
+Second bind press will bring back the original volume.
+This will ONLY deafen the application that is in focus, leaving all background applications still audible.
+
+It works great with Rainbow Six Siege, during prep phase.
+
+Autohotkey v1.1 required!
+download it here: https://www.autohotkey.com/download/ahk-install.exe
+
+Than just run the "Game Deafen Toggle.ahk" script and toggle the deafen in your game by pressing F1.
+VA.ahk should be located in the same folder as the script.
 
 F1 is no good for you? 
-[Keybinding can be changed here](AHK/mute_current_application.ahk#L4) 
+[Keybinding can be changed here](toggle_game_deafen.ahk#L11) 
 
-To do this, you'll need to download a copy of Autohotkey yourself, download source files, make the neccesary changes, and then compile them. Or ask a friend who knows these kinda things to do it for you.
+On default, the script reduces the volume to 13% of the original volume.
+[Reduction procentage can be changed here](toggle_game_deafen.ahk#L9)
+
+
 
 Syntax tips:
 

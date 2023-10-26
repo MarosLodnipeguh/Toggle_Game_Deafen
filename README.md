@@ -18,7 +18,7 @@ On default, the script reduces the volume to 13% of the original volume.
 [Reduction procentage can be changed here](toggle_game_deafen.ahk#L9)
 
 
-
+===============================================================================================================================
 
 Syntax tips:
 

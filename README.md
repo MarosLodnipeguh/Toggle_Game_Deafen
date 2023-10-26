@@ -1,14 +1,13 @@
 # toggle game deafen
-Autohotkey script to reduce the current application volume, on toggle, to have better comms / not get earraped by the game.
+AutoHotkey script to reduce the current application volume, on toggle, to have better comms / not get earraped by the game.
 Second bind press will bring back the original volume.
 This will ONLY deafen the application that is in focus, leaving all background applications still audible.
 
 It works great with Rainbow Six Siege, during prep phase.
 
-Autohotkey v1.1 required!
-download it here: https://www.autohotkey.com/download/ahk-install.exe
+Autohotkey v1.1 required! [download it here](https://www.autohotkey.com/download/ahk-install.exe)
 
-Than just run the "Game Deafen Toggle.ahk" script and toggle the deafen in your game by pressing F1.
+Than just run the [toggle_game_deafen.ahk](https://github.com/MarosLodnipeguh/toggle_game_deafen/blob/master/toggle_game_deafen.ahk) script and deafen/undeafen your game by pressing F1.
 VA.ahk should be located in the same folder as the script.
 
 F1 is no good for you? 

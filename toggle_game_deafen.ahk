@@ -1,13 +1,12 @@
 #Include VA.ahk
 
 first_exec := true
-
+audio_app := 0
 muted := false
-
 default_volume := 0
 reduced_volume := 0
 
-reduction_procentage := 0.133 ; Defines how much the default volume will be reduced (13.33% of the original volume in this case)
+reduction_percentage := 0.133 ; Defines how much the default volume will be reduced (13.33% of the original volume in this case)
 
 F1::  ; F1 hotkey - adjust volume of active window
 
@@ -15,28 +14,28 @@ F1::  ; F1 hotkey - adjust volume of active window
   WinGet, ActivePid, PID, A
 
   ; Get the volume object of the active window
-  Volume := GetVolumeObject(ActivePid)
+  audio_app := GetVolumeObject(ActivePid)
 
-  if (!Volume) {
+  if (!audio_app) {
     MsgBox, 48, , There was a problem retrieving the application volume interface. Focus on your game / app and try again. , 10
     return
   }
 
   if (first_exec) {
-    VA_ISimpleAudioVolume_GetMasterVolume(Volume, default_volume) ; Get the original volume level of the application
-    reduced_volume := default_volume * reduction_percentage ; Calculate the reduced volume level
+    VA_ISimpleAudioVolume_GetMasterVolume(audio_app, default_volume) ; Get the original volume level of the application
+    reduced_volume := (default_volume * reduction_percentage) ; Calculate the reduced volume level
     first_exec := false
   }
 
   if (!muted) {
-    VA_ISimpleAudioVolume_SetMasterVolume(Volume, reduced_volume) ; Set volume to reduced value
+    VA_ISimpleAudioVolume_SetMasterVolume(audio_app, reduced_volume) ; Set volume to reduced value
     muted := true
   } else {
-    VA_ISimpleAudioVolume_SetMasterVolume(Volume, default_volume) ; Set volume back to the original value
+    VA_ISimpleAudioVolume_SetMasterVolume(audio_app, default_volume) ; Set volume back to the original value
     muted := false
   }
 
-  ObjRelease(Volume)
+  ObjRelease(audio_app)
 return
 
 ; Required for app-specific volume adjustment

@@ -13,7 +13,7 @@ Than just run the [toggle_game_deafen.ahk](https://github.com/MarosLodnipeguh/to
 F1 is no good for you? 
 [Keybinding can be changed here](toggle_game_deafen.ahk#L11) 
 
-On default, the script reduces the volume to 13% of the original volume.
+By default, the script reduces the volume to 13% of the original volume.
 [Reduction procentage can be changed here](toggle_game_deafen.ahk#L9)
 
 ===========================================================================
